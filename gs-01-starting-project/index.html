@@ -10,11 +10,12 @@
     <div id="app">
       <div>
         <label for="goal">Goal</label>
-        <input type="text" id="goal" v-model="enteredValue" />
-        <button v-on:click="addGoal">Add Goal</button>
+        <input type="text" id="goal" v-model="goalValue" />
+        <input type="text" id="importance" v-model="importanceValue" />
+        <button v-on:click="addGoalsandImportance">Add Goal</button>
       </div>
       <ul>
-        <li v-for="goal in goals" >{{ goal }}</li>
+        <li v-for="(goal, index) in goals" :key="index" >Goal: {{ goal }} - Importance: {{ importance[index] }}</li>
       </ul>
     </div>
     <script src="https://unpkg.com/vue@next"></script>

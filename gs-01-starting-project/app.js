@@ -2,13 +2,17 @@ Vue.createApp({
   data(){
     return {
       goals: [],
-      enteredValue: ''
+      importance: [],
+      goalValue: '',
+      importanceValue: ''
     }
   },
   methods: {
-    addGoal(){
-      this.goals.push(this.enteredValue);
-      this.enteredValue = '';
+    addGoalsandImportance(){
+      this.goals.push(this.goalValue);
+      this.goalValue = '';
+      this.importance.push(this.importanceValue);
+      this.importanceValue = '';
     }
   }
 }).mount('#app');
