@@ -10,9 +10,8 @@ Vue.createApp({
   methods: {
     addGoalsandImportance(){
       this.goals.push(this.goalValue);
-      this.goalValue = '';
-      this.importance.push(this.importanceValue);
-      this.importanceValue = '';
+            this.importance.push(this.importanceValue);
+      [this.goalValue,this.importanceValue] = ['','']; //Clearing out the goal and importance
     }
   }
 }).mount('#app');
