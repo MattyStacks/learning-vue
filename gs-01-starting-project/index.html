@@ -10,8 +10,8 @@
     <div id="app">
       <div>
         <label for="goal">Goal</label>
-        <input type="text" id="goal" v-model="goalValue" />
-        <input type="text" id="importance" v-model="importanceValue" />
+        <input type="text" id="goal" v-model="goalValue" @keydown.enter="addGoalsandImportance"/>
+        <input type="text" id="importance" v-model="importanceValue" @keydown.enter="addGoalsandImportance"/>
         <button v-on:click="addGoalsandImportance">Add Goal</button>
       </div>
       <ul>
